@@ -1,0 +1,33 @@
+{
+  "name": "JET-WebDriver-Tests",
+  "version": "1.0.0",
+  "description": "An Oracle JavaScript Extension Toolkit(JET) web app",
+  "dependencies": {
+    "@oracle/oraclejet": "20.1.2",
+    "@oracle/oraclejet-core-pack": "20.1.2"
+  },
+  "devDependencies": {
+    "@oracle/ojet-cli": "20.1.1",
+    "@oracle/oraclejet-webdriver": "20.1.2",
+    "extract-zip": "^1.7.0",
+    "ts-node": "^10.9.1",
+    "fs-extra": "^8.1.0",
+    "glob": "7.2.0",
+    "underscore": "^1.10.2",
+    "yargs-parser": "13.1.2",
+    "@types/chai": "^4.3.10",
+    "@types/mocha": "^10.0.4",
+    "@types/selenium-webdriver": "^4.1.20",
+    "chai": "4.5.0",
+    "mocha": "^10.2.0",
+    "selenium-webdriver": "^4.15.0",
+    "typescript": "5.3.2"
+  },
+  "engines": {
+    "node": ">=12.21.0"
+  },
+  "private": true,
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha --require ts-node/register --timeout=0"
+  }
+}

@@ -1,0 +1,31 @@
+<!--
+ Copyright (c) 2014, 2026, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+  <h1>Validate Test Environment</h1>
+  <div id="div1">
+   <oj-form-layout max-columns="1"   direction="row">
+    <p> Test view code using Chai <a target="_blank" href="https://www.chaijs.com/guide/styles/#expect">expect</a></p>
+    <oj-input-text id="text-input" value="{{value}}" label-hint="Test View" label-edge="inside"></oj-input-text>
+    <div class="oj-sm-margin-4x-vertical">
+      <span>View test value is:</span>
+      <span>
+        <strong><oj-bind-text value="[[value]]"></oj-bind-text></strong>
+      </span>
+    </div>
+    <hr>
+    <p>Test ViewModel code using <a target="_blank" href="https://www.oracle.com/webfolder/technetwork/jet/wdtsdoc/classes/index.Expectation.html">Expectation</a> from 
+    <code>@oracle/oraclejet-webdriver</code></p>
+
+    <oj-input-text id="view-model-test" value="{{vmValue}}" label-hint="Test viewModel" label-edge="inside"></oj-input-text>
+    <div class="oj-sm-margin-4x-vertical">
+      <span>View model test value is:</span>
+      <span>
+          <strong><oj-bind-text value="[[vmValue]]"></oj-bind-text></strong>
+      </span>
+    </div>
+  </oj-form-layout>
+  </div>
+</div>
