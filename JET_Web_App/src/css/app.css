@@ -109,3 +109,8 @@ font-weight: bolder;}
   width:100%;
   min-width: 100%;
 }
+
+.oj-badge{
+  background-color:rgb(66, 21, 76);
+  color: aliceblue;
+}

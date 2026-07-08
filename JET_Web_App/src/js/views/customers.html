@@ -1,11 +1,35 @@
 <!--
- Copyright (c) 2014, 2026, Oracle and/or its affiliates.
- Licensed under The Universal Permissive License (UPL), Version 1.0
- as shown at https://oss.oracle.com/licenses/upl/
- -->
+Copyright (c) 2014, 2026, Oracle and/or its affiliates.
+Licensed under The Universal Permissive License (UPL), Version 1.0
+as shown at https://oss.oracle.com/licenses/upl/
+-->
 <div class="oj-hybrid-padding">
-  <h1>Customers Content Area</h1>
-  <div>
-      To change the content of this section, you will make edits to the customers.html file located in the /js/views folder.
-  </div>
-</div>
+<oj-form-layout id="basicForm" max-columns="3" direction="row" user-assistance-density="compact">
+  <oj-input-text  :id="[[inputFirstNameId]]"label-hint="[[inputFirstNameLabel]]" label-edge="inside" value="{{inputFirstNameValue}}"  required="required" on-value-changed="[[onInputFirstNameValueChanged]]" ></oj-input-text>
+  <oj-input-text  :id="[[inputLastNameId]]"label-hint="Last Name" label-edge="inside" value="{{inputLastNameValue}}"  required="required" disabled="[[isInputLastNameDisabled()]]"></oj-input-text>
+  <oj-input-number :id="[[inputAgeId]]" label-hint="Age" label-edge="inside" value="{{age}}"></oj-input-number>
+  <oj-input-text :id="[[inputFullNameId]]" label-hint ="Full Name" label-edge="inside" value="[[inputFullNameValue]]" disabled="[[isInputFullNameDisabled()]]" help-hints.definition="Fill the above fields first to enable"></oj-input-text>
+</oj-form-layout>
+
+<oj-collapsible expanded="true">
+    <h3 slot="header">Interests</h3>
+    <oj-checkboxset value="{{Interests}}">
+        <oj-option value="Painting">Painting</oj-option>
+        <oj-option value="Skiing">Skiing</oj-option>
+        <oj-option value="Bicycling">Bicycling</oj-option>
+    </oj-checkboxset>
+  </oj-collapsible>
+
+<span>
+  <p><strong>Interests Selected:</strong> 
+  <div class="oj-flex" >
+    <oj-bind-for-each data="[[Interests]]">
+      <template>
+        <span class="oj-sm-margin-2x-end oj-badge">
+          <oj-bind-text value="[[$current.data]]"></oj-bind-text>
+        </span>
+      </template>
+    </oj-bind-for-each>
+  </div>  
+</span>
+</div> 

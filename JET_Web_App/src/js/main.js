@@ -50,9 +50,17 @@
   'touchr': 'libs/touchr/touchr'
   ,
         'chai': 'libs/chai/chai-4.5.0'
+      },
+      config:{
+        ojL10n:{
+          merge: {
+            'ojtranslations/nls/ojtranslations':'resources/nls/myFirstAppTranslations'
+          }
+        }
       }
       // endinjector
     }
+
   );
 }());
 
